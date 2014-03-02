@@ -18,3 +18,9 @@
 /** Mеняет размер изображения. */
 + (UIImage *)imageWithResizeImage:(UIImage *)image scaledToSize:(CGSize)newSize;
 ```
+
+## [NSDate](https://github.com/kovalskiy/Category/tree/master/NSDate)
+```objective-c
+/** Принимает дату в формате строки [yyyy-M-dd hh:mm:ss] возвращает количество сукунд/минут/дней назад. */
++ (NSString *)timeIntervalWithStartDate:(NSString *)date1;
+```
