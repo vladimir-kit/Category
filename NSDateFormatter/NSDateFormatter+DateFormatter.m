@@ -1,7 +1,8 @@
-#import "NSDateFormatter+NumberOfYears.h"
+#import "NSDateFormatter+DateFormatter.h"
 
-@implementation NSDateFormatter (NumberOfYears)
+@implementation NSDateFormatter (DateFormatter)
 
+#pragma mark - Get Number Of Years
 /** Год/месяц/день рождения пользователя. */
 NSDate *dateAllDateUsers = nil;
 /** Год рождения пользователя. */
@@ -16,7 +17,6 @@ NSString *stringTodayYear = nil;
 /** Сегодняшний месяц и день. */
 NSString *stringTodayMounthAndDay = nil;
 
-#pragma mark - Users
 /** Получаю полную дату рожения пользователя. */
 + (NSString *)getNumberOfYearsSetBirthdayDate:(NSString *)birthday; {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -42,7 +42,6 @@ NSString *stringTodayMounthAndDay = nil;
     stringMounthAndDayUser = [dateFormatter stringFromDate:dateAllDateUsers];
 }
 
-#pragma mark - Today
 /** Получает сегодняшний год. */
 + (void)todayYear {
     NSDate *todayDate = [NSDate date];
@@ -59,7 +58,6 @@ NSString *stringTodayMounthAndDay = nil;
     stringTodayMounthAndDay = [dateFormatter stringFromDate:todayDate];
 }
 
-#pragma mark -
 /** Проверяю сегодняшнюю дату с датой рождения пользователя. */
 + (void)checkYear {
     if ([stringTodayMounthAndDay integerValue] == [stringMounthAndDayUser integerValue]) {
@@ -73,7 +71,6 @@ NSString *stringTodayMounthAndDay = nil;
     }
 }
 
-#pragma mark -
 /** От текущего года отнимает год рождения пользователя и отнимает 1-цу. */
 + (void)minusYearUser {
     stringNumbersYearsUser = [NSString stringWithFormat:@"%d", [stringTodayYear integerValue] - [stringYearsUsers integerValue] - 1];

@@ -1,6 +1,6 @@
 #import <UIKit/UIKit.h>
 
-@interface UIColor (RandomColor)
+@interface UIColor (Color)
 
 /** Возвращает рандомный цвет. */
 + (UIColor *)getRandomColor;
