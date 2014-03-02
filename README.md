@@ -16,7 +16,6 @@
 ```
 
 ## UIImage
-UIImage+ImageResize.h
 #### [UIImage+ImageResize.h](https://github.com/kovalskiy/Category/blob/master/UIImage/UIImage%2BImageResize.h)
 ```objective-c
 /** Mеняет размер изображения. */
