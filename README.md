@@ -15,3 +15,6 @@
 /** Возвращает рандомный цвет. */
 + (UIColor *)getRandomColor;
 ```
+
+## UIImage
+	
